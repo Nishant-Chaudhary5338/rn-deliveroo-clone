@@ -3,6 +3,7 @@ import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import {ChevronDownIcon, UserIcon, MagnifyingGlassIcon, AdjustmentsHorizontalIcon} from "react-native-heroicons/outline"
 import Catogories from '../components/Catogories'
+import FeaturedRow from '../components/FeaturedRow'
 
 const HomeScreen = () => {
     const navigation = useNavigation();
@@ -14,7 +15,7 @@ const HomeScreen = () => {
         })
     }, [])
   return (
-    <SafeAreaView style = {{backgroundColor: "white"}}>
+    <SafeAreaView className = "bg-green-500">
       
       <View style = {{display: 'flex', flexDirection: "row",}}>
         <Image style = {{height: 40, width: 40, padding: 16, borderRadius: 100 }} source={{uri: "https://links.papareact.com/wru"}} />
@@ -40,6 +41,10 @@ const HomeScreen = () => {
       {/*body*/}
       <ScrollView>
         <Catogories style = {{backgroundColor: "white"}} />
+        <FeaturedRow title= "Featured" description = "" featuredCatogory = "" />
+        <FeaturedRow title= "Featured" description = "" featuredCatogory = "" />
+        <FeaturedRow title= "Featured" description = "" featuredCatogory = "" />
+        <FeaturedRow title= "Featured" description = "" featuredCatogory = "" />
 
       </ScrollView>
     </SafeAreaView>
